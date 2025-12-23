@@ -5,31 +5,58 @@
     <title>ABES Engineering College | Home</title>
 
     <style>
-        
         html, body {
             height: 100%;
             margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: white;
             display: flex;
             flex-direction: column;
+            background-color: #f4f6f9;
         }
 
-        
+        /* VIDEO BACKGROUND */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-bg iframe {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        /* OVERLAY (dark effect) */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: -1;
+        }
+
+        /* HEADER */
         header {
-            background-color: #002147;
+            background-color: rgba(0, 33, 71, 0.9);
             color: white;
-            padding: 25px;
             text-align: center;
+            padding: 25px;
         }
 
         nav {
-            background-color: #004080;
-            padding: 12px;
+            background-color: rgba(0, 64, 128, 0.9);
             text-align: center;
+            padding: 12px;
         }
 
         nav a {
@@ -39,41 +66,45 @@
             font-weight: bold;
         }
 
-        
         main {
-            flex: 1;   
+            flex: 1;
+            color: white;
         }
 
-        section {
-            background-color: rgb(170, 124, 19);
-            margin: 20px;
-            padding: 40px;
+        .hero {
             text-align: center;
-            border-radius: 6px;
+            padding: 80px 20px;
         }
 
-        h2 {
-            color: #002147;
+        .hero h2 {
+            font-size: 32px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 16px;
         }
 
         .container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
             margin: 20px;
         }
 
         .box {
-            background-color: rgb(36, 213, 151);
+            background-color: rgba(255,255,255,0.9);
+            color: black;
             width: 300px;
             margin: 15px;
             padding: 20px;
             border-radius: 6px;
+            text-align: center;
         }
 
-        
         footer {
-            background-color: #002147;
+            background-color: rgba(0, 33, 71, 0.95);
             color: white;
             text-align: center;
             padding: 12px;
@@ -83,11 +114,21 @@
 
 <body>
 
+<!-- VIDEO BACKGROUND -->
+<div class="video-bg">
+    <iframe 
+        src="https://www.youtube.com/embed/vGoiqOA6O2g?autoplay=1&mute=1&loop=1&playlist=vGoiqOA6O2g&controls=0&modestbranding=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<div class="overlay"></div>
+
 <header>
     <h1>ABES Engineering College</h1>
-    <p>An Autonomus college | Approved by AICTE</p>
-<img src="abes.jpeg" alt="abesec">
-
+    <p>Affiliated to AKTU | Approved by AICTE</p>
 </header>
 
 <nav>
@@ -99,23 +140,23 @@
 </nav>
 
 <main>
-    <section>
+    <section class="hero">
         <h2>Welcome to ABES Engineering College</h2>
         <p>
-            ABES Engineering College is committed to providing quality
-            technical education and preparing students for global careers.
+            Empowering students with quality education, innovation
+            and industry-ready skills for a better future.
         </p>
     </section>
 
     <div class="container">
         <div class="box">
             <h3>Quality Education</h3>
-            <p>Experienced faculty and industry-focused learning.</p>
+            <p>Experienced faculty and modern teaching methods.</p>
         </div>
 
         <div class="box">
             <h3>Infrastructure</h3>
-            <p>Modern labs, library and Wi-Fi enabled campus.</p>
+            <p>Advanced labs, library and Wi-Fi campus.</p>
         </div>
 
         <div class="box">
@@ -131,3 +172,4 @@
 
 </body>
 </html>
+
